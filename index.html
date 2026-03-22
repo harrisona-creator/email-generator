@@ -334,7 +334,7 @@
 </div>
 
 <div class="footer">
-  The Outbound Guys \u0026nbsp;\u0026middot;\u0026nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
+  The Outbound Guys &nbsp;&middot;&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
 </div>
 
 <script>
@@ -451,7 +451,7 @@ async function generate() {
     document.getElementById(`seq-content-${i}`).innerHTML = '';
     document.getElementById(`seq-loading-${i}`).style.display = 'flex';
     const btn = document.getElementById(`seq-btn-${i}`);
-    btn.textContent = 'â Build follow-up sequence';
+    btn.textContent = '↓ Build follow-up sequence';
     btn.disabled = false;
   }
 
@@ -600,13 +600,13 @@ Return ONLY valid JSON, no markdown:
     });
 
     seqContent.innerHTML = html;
-    btn.textContent = 'âº Regenerate sequence';
+    btn.textContent = '↺ Regenerate sequence';
     btn.disabled = false;
 
   } catch(err) {
     seqLoading.style.display = 'none';
     seqContent.innerHTML = '<div style="padding:16px 18px;font-size:13px;color:var(--red);">Something went wrong. Please try again.</div>';
-    btn.textContent = 'â Build follow-up sequence';
+    btn.textContent = '↓ Build follow-up sequence';
     btn.disabled = false;
     console.error(err);
   }
