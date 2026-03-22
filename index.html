@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Outbound Guys — Cold Email Generator</title>
+  <title>The Outbound Guys â Cold Email Generator</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
   :root {
@@ -174,7 +174,7 @@
   <div class="header-inner">
     <div class="header-badge">The Outbound Guys</div>
     <h1 class="header-title">Cold Email <span>Generator</span></h1>
-    <p class="header-sub">Fill in your offer. Get 3 spam-free cold emails — then build a full follow-up sequence.</p>
+    <p class="header-sub">Fill in your offer. Get 3 spam-free cold emails â then build a full follow-up sequence.</p>
   </div>
 </div>
 
@@ -188,7 +188,7 @@
     </div>
     <div class="field-group">
       <label class="field-label">Who is your ideal customer?</label>
-      <textarea id="icp" placeholder="e.g. Owners of recruitment agencies with 2–10 consultants, UK-based, frustrated with inconsistent deal flow and relying too heavily on job boards." style="min-height:80px"></textarea>
+      <textarea id="icp" placeholder="e.g. Owners of recruitment agencies with 2â10 consultants, UK-based, frustrated with inconsistent deal flow and relying too heavily on job boards." style="min-height:80px"></textarea>
     </div>
     <div class="field-row">
       <div>
@@ -197,7 +197,7 @@
       </div>
       <div>
         <label class="field-label">Result clients get</label>
-        <input type="text" id="result" placeholder="e.g. 8–15 booked calls per month">
+        <input type="text" id="result" placeholder="e.g. 8â15 booked calls per month">
       </div>
     </div>
     <div class="field-group">
@@ -221,7 +221,7 @@
     </div>
     <div class="btn-row">
       <button class="btn-clear" onclick="clearAll()">Clear</button>
-      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Emails →</button>
+      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Emails â</button>
     </div>
   </div>
 
@@ -242,7 +242,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-short">Short &amp; Punchy</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(1)" id="seq-btn-1">↓ Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(1)" id="seq-btn-1">â Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(1)">Copy</button>
           </div>
         </div>
@@ -266,7 +266,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-problem">Problem-Led</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(2)" id="seq-btn-2">↓ Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(2)" id="seq-btn-2">â Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(2)">Copy</button>
           </div>
         </div>
@@ -290,7 +290,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-curiosity">Curiosity-Based</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(3)" id="seq-btn-3">↓ Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(3)" id="seq-btn-3">â Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(3)">Copy</button>
           </div>
         </div>
@@ -312,7 +312,7 @@
     </div>
 
     <div class="regen-row">
-      <button class="btn-regen" onclick="generate()">↺ Regenerate emails</button>
+      <button class="btn-regen" onclick="generate()">âº Regenerate emails</button>
     </div>
 
     <div class="cta-block">
@@ -320,7 +320,7 @@
         <div class="cta-eyebrow">Want the full system?</div>
         <div class="cta-title">Join the free community</div>
         <div class="cta-sub">Get access to our proven copy frameworks, lead building guides,<br>and everything you need to build outbound that actually works.</div>
-        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free → skool.com/automated-outbound</a>
+        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free â skool.com/automated-outbound</a>
       </div>
     </div>
   </div>
@@ -328,11 +328,11 @@
 </div>
 
 <div class="footer">
-  The Outbound Guys &nbsp;·&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
+  The Outbound Guys &nbsp;Â·&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
 </div>
 
 <script>
-// ── SPAM WORD LISTS (mirrored exactly from Spam Word Checker) ──────────────
+// ââ SPAM WORD LISTS (mirrored exactly from Spam Word Checker) ââââââââââââââ
 const HIGH_RISK = [
   'act now','act immediately','action required','apply now','apply online',
   'before it\'s too late','buy now','buy today','buy direct','call now','cancel now',
@@ -347,7 +347,7 @@ const HIGH_RISK = [
   'time limited','today only','top urgent','urgent','what are you waiting for',
   'while supplies last','asap','as soon as possible','don\'t miss out','last chance',
   'respond now','reply now','only 24 hours','time sensitive','expires in',
-  '$$$','£££','50% off','accept credit cards','avoid bankruptcy','bad credit',
+  '$$$','Â£Â£Â£','50% off','accept credit cards','avoid bankruptcy','bad credit',
   'bankruptcy','billion dollars','billionaire','cash','cash bonus','cash out',
   'casino','cents on the dollar','claim your discount','credit card',
   'credit card offers','debt','double your','double your wealth','double your cash',
@@ -405,7 +405,7 @@ function setTone(el, tone) {
 }
 
 async function callClaude(prompt) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+  const res = await fetch('https://harrisonacreator--8781b3b825d111f1847242dde27851f2.web.val.run', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -414,7 +414,14 @@ async function callClaude(prompt) {
       messages: [{ role: 'user', content: prompt }]
     })
   });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Proxy error (${res.status}): ${errText}`);
+  }
   const data = await res.json();
+  if (data.error) {
+    throw new Error(`API error: ${data.error.message || JSON.stringify(data.error)}`);
+  }
   const raw = data.content.map(i => i.text || '').join('');
   return raw.replace(/```json|```/g, '').trim();
 }
@@ -438,7 +445,7 @@ async function generate() {
     document.getElementById(`seq-content-${i}`).innerHTML = '';
     document.getElementById(`seq-loading-${i}`).style.display = 'flex';
     const btn = document.getElementById(`seq-btn-${i}`);
-    btn.textContent = '↓ Build follow-up sequence';
+    btn.textContent = 'â Build follow-up sequence';
     btn.disabled = false;
   }
 
@@ -452,11 +459,11 @@ EMAIL GOAL: ${goal}
 TONE: ${selectedTone}
 
 Write exactly 3 emails:
-1. SHORT & PUNCHY — Under 75 words. Tight, direct, no fluff. One clear CTA.
-2. PROBLEM-LED — Opens with the pain. Agitates briefly. Presents solution. One soft CTA.
-3. CURIOSITY-BASED — Opens with a provocative question or surprising statement. Builds intrigue. Low-friction CTA.
+1. SHORT & PUNCHY â Under 75 words. Tight, direct, no fluff. One clear CTA.
+2. PROBLEM-LED â Opens with the pain. Agitates briefly. Presents solution. One soft CTA.
+3. CURIOSITY-BASED â Opens with a provocative question or surprising statement. Builds intrigue. Low-friction CTA.
 
-CRITICAL — BANNED WORDS — do NOT use any of these: ${ALL_BANNED}
+CRITICAL â BANNED WORDS â do NOT use any of these: ${ALL_BANNED}
 
 ADDITIONAL RULES:
 - NEVER start with "I hope", "My name is", "I'm reaching out", or "I wanted to"
@@ -520,13 +527,13 @@ BODY: ${email.body}
 OFFER CONTEXT: ${offer}
 IDEAL CUSTOMER: ${icp}
 
-Write a 3-step follow-up sequence. Each follow-up must take a completely different angle — do not just repeat the original email.
+Write a 3-step follow-up sequence. Each follow-up must take a completely different angle â do not just repeat the original email.
 
-Step 1 — Day 3: Short bump. Different subject. No pitch. Just a casual check-in or a single new thought. Under 40 words.
-Step 2 — Day 7: New angle. Add a brief case study reference, a relevant observation about their industry, or a sharp question. Under 80 words.
-Step 3 — Day 14: The breakup email. Assume they're not interested. Leave the door open gracefully. Under 50 words.
+Step 1 â Day 3: Short bump. Different subject. No pitch. Just a casual check-in or a single new thought. Under 40 words.
+Step 2 â Day 7: New angle. Add a brief case study reference, a relevant observation about their industry, or a sharp question. Under 80 words.
+Step 3 â Day 14: The breakup email. Assume they're not interested. Leave the door open gracefully. Under 50 words.
 
-CRITICAL — BANNED WORDS — do NOT use any of these: ${ALL_BANNED}
+CRITICAL â BANNED WORDS â do NOT use any of these: ${ALL_BANNED}
 
 ADDITIONAL RULES:
 - Never say "just following up", "checking in", "circling back", "bumping this"
@@ -575,13 +582,13 @@ Return ONLY valid JSON, no markdown:
     });
 
     seqContent.innerHTML = html;
-    btn.textContent = '↺ Regenerate sequence';
+    btn.textContent = 'âº Regenerate sequence';
     btn.disabled = false;
 
   } catch(err) {
     seqLoading.style.display = 'none';
     seqContent.innerHTML = '<div style="padding:16px 18px;font-size:13px;color:var(--red);">Something went wrong. Please try again.</div>';
-    btn.textContent = '↓ Build follow-up sequence';
+    btn.textContent = 'â Build follow-up sequence';
     btn.disabled = false;
     console.error(err);
   }
