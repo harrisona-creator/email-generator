@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Outbound Guys â Cold Email Generator</title>
+  <title>The Outbound Guys &#8212; Cold Email Generator</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
   :root {
@@ -135,6 +135,12 @@
   .btn-step-copy.copied { border-color: var(--green); color: var(--green); }
   .no-line .step-line { display: none; }
 
+  /* SUBJECT LINE SELECTOR */
+  .subject-selector { padding: 12px 18px; border-bottom: 1.5px solid var(--border); background: var(--white); }
+  .subject-selector label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+  .subject-selector select { width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text); background: var(--bg); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 30px; cursor: pointer; outline: none; }
+  .subject-selector select:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(108,63,224,0.1); }
+
   /* REGEN */
   .regen-row { display: flex; justify-content: center; margin-top: 4px; margin-bottom: 16px; }
   .btn-regen { background: none; border: 1.5px solid var(--border); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; padding: 10px 24px; border-radius: 10px; cursor: pointer; transition: all 0.2s; }
@@ -174,7 +180,7 @@
   <div class="header-inner">
     <div class="header-badge">The Outbound Guys</div>
     <h1 class="header-title">Cold Email <span>Generator</span></h1>
-    <p class="header-sub">Fill in your offer. Get 3 spam-free cold emails â then build a full follow-up sequence.</p>
+    <p class="header-sub">Fill in your offer. Get 3 spam-free cold emails &#8212; then build a full follow-up sequence.</p>
   </div>
 </div>
 
@@ -188,16 +194,16 @@
     </div>
     <div class="field-group">
       <label class="field-label">Who is your ideal customer?</label>
-      <textarea id="icp" placeholder="e.g. Owners of recruitment agencies with 2â10 consultants, UK-based, frustrated with inconsistent deal flow and relying too heavily on job boards." style="min-height:80px"></textarea>
+      <textarea id="icp" placeholder="e.g. Owners of recruitment agencies with 2-10 consultants, UK-based, frustrated with inconsistent deal flow and relying too heavily on job boards." style="min-height:80px"></textarea>
     </div>
     <div class="field-row">
       <div>
         <label class="field-label">#1 problem you solve</label>
-        <input type="text" id="problem" placeholder="e.g. Inconsistent pipeline">
+        <textarea id="problem" placeholder="e.g. Inconsistent pipeline, too reliant on referrals" style="min-height:70px; resize:vertical;"></textarea>
       </div>
       <div>
         <label class="field-label">Result clients get</label>
-        <input type="text" id="result" placeholder="e.g. 8â15 booked calls per month">
+        <textarea id="result" placeholder="e.g. 8-15 booked calls per month within 6 weeks" style="min-height:70px; resize:vertical;"></textarea>
       </div>
     </div>
     <div class="field-group">
@@ -221,7 +227,7 @@
     </div>
     <div class="btn-row">
       <button class="btn-clear" onclick="clearAll()">Clear</button>
-      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Emails â</button>
+      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Emails &#8594;</button>
     </div>
   </div>
 
@@ -242,7 +248,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-short">Short &amp; Punchy</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(1)" id="seq-btn-1">â Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(1)" id="seq-btn-1">&#8595; Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(1)">Copy</button>
           </div>
         </div>
@@ -266,7 +272,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-problem">Problem-Led</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(2)" id="seq-btn-2">â Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(2)" id="seq-btn-2">&#8595; Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(2)">Copy</button>
           </div>
         </div>
@@ -290,7 +296,7 @@
         <div class="email-output-header">
           <span class="email-type-badge badge-curiosity">Curiosity-Based</span>
           <div class="header-btn-group">
-            <button class="btn-followup" onclick="buildSequence(3)" id="seq-btn-3">â Build follow-up sequence</button>
+            <button class="btn-followup" onclick="buildSequence(3)" id="seq-btn-3">&#8595; Build follow-up sequence</button>
             <button class="btn-copy" onclick="copyEmail(3)">Copy</button>
           </div>
         </div>
@@ -312,7 +318,7 @@
     </div>
 
     <div class="regen-row">
-      <button class="btn-regen" onclick="generate()">âº Regenerate emails</button>
+      <button class="btn-regen" onclick="generate()">&#8634; Regenerate emails</button>
     </div>
 
     <div class="cta-block">
@@ -320,7 +326,7 @@
         <div class="cta-eyebrow">Want the full system?</div>
         <div class="cta-title">Join the free community</div>
         <div class="cta-sub">Get access to our proven copy frameworks, lead building guides,<br>and everything you need to build outbound that actually works.</div>
-        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free â skool.com/automated-outbound</a>
+        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free &#8594; skool.com/automated-outbound</a>
       </div>
     </div>
   </div>
@@ -328,7 +334,7 @@
 </div>
 
 <div class="footer">
-  The Outbound Guys &nbsp;Â·&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
+  The Outbound Guys \u0026nbsp;\u0026middot;\u0026nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
 </div>
 
 <script>
@@ -552,7 +558,19 @@ Return ONLY valid JSON, no markdown:
 
     seqLoading.style.display = 'none';
 
-    let html = '<div class="sequence-header"><div class="sequence-label">Follow-up sequence</div></div>';
+    // Collect all subject lines
+    var allSubjects = [email.subject];
+    steps.forEach(function(st) { allSubjects.push(st.subject); });
+
+    let html = '<div class="subject-selector">' +
+      '<label>Choose subject line for this thread</label>' +
+      '<select id="subject-select-' + num + '" onchange="updateThreadSubject(' + num + ')">';
+    allSubjects.forEach(function(subj, si) {
+      var label = si === 0 ? 'Original: ' : 'Follow-up ' + si + ': ';
+      html += '<option value="' + subj.replace(/"/g, '&quot;') + '">' + label + subj + '</option>';
+    });
+    html += '</select></div>';
+    html += '<div class="sequence-header"><div class="sequence-label">Follow-up sequence</div></div>';
 
     steps.forEach((step, idx) => {
       const isLast = idx === steps.length - 1;
@@ -591,6 +609,13 @@ Return ONLY valid JSON, no markdown:
     btn.textContent = 'â Build follow-up sequence';
     btn.disabled = false;
     console.error(err);
+  }
+}
+
+function updateThreadSubject(num) {
+  var sel = document.getElementById('subject-select-' + num);
+  if (sel) {
+    document.getElementById('subject-' + num).textContent = sel.value;
   }
 }
 
